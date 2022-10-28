@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <h1>JS test</h1>
+    <hr>
+    <p>Calc: <textarea name="calc" id="txtarea" cols="30" rows="10"></textarea></p>
+    <p>Result: <input type="text" id="result" readonly></p>
+    <button onclick="document.all.result.value=eval(document.all.calc.value);alert('Привет, Маринок-любок!!!')">SEND</button>
+    <button onclick="document.all.calc.value='';document.all.result.value=''">RESET</button>
+</body>
+</html>

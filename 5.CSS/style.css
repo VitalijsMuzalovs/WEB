@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+    text-decoration: none;
+}
+
+nav{
+    background-color: blueviolet;
+    padding: 30px;
+}
+
+nav ul{
+    text-align: center;
+    /*margin: 0 auto; - lai centrētu bloka elementus*/
+}
+
+nav ul li{
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style-type: none;
+    margin:5px;
+    padding: 10px;
+    display:inline;
+}
+
+nav ul li:hover{
+    background-color: #333;
+    color: cadetblue;
+}
+
+header{
+    width: 100%;
+    height: 80vh; /* Viewport height */
+    background-image: url("images/bg.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../5.CSS/images/bg.jpg") center 100% no-repeat; /* instead of previous 4 rows of code*/
+}
+
+main{
+    background-color: rgb(206,227,255);
+    padding: 2rem;
+}
+
+.container{
+    margin: 0 auto;
+    width:1200px;
+}
+
+h1{
+    background-color: #024280;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+article{
+    margin-top:20px ;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+article h3{
+    color: #024280;
+    margin-bottom: 10px;
+}
+
+article p{
+    text-align: justify;
+}
+
+article img{
+    float: left;
+    height: 200px;
+    transition: transform 1s ease-in-out;
+}
+
+article img:hover{
+    transform: rotate(360deg);
+}
+
+.button{
+    background-color: #024280;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;    
+}
+
+.button:hover{
+    background-color: #666;
+    letter-spacing: 2px;
+}
+
+footer{
+    background-color:#fff;
+    padding:  2rem;
+    color: #333;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+body{
+    background-color: #999;
+}
+
+#kaste1{
+    width: 500px;
+    max-height: 100px;
+    background-color: darkred;
+    color: white;
+    border:3px solid #333;
+    /* margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin: 30px 20px 10px 5px; same as 4 rows above -> top/right/bottom/left
+    margin: 30px 20px; -> top/bottom right/left*/
+    margin: 30px 20px;
+    padding: 5px 10px;
+    overflow:auto;
+}
+
+#kaste2{
+    width: 500px;
+    background-color: darkgreen;
+    color: white;
+    border:3px solid #333;
+    margin: 30px 20px;
+    padding: 5px 10px;
+    box-sizing: border-box; /* make outside boundries as width => outside 500 px*/
+}

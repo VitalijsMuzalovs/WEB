@@ -1,0 +1,32 @@
+body{
+    font-family: calibri;
+}
+
+/*
+p:nth-child(even){
+    background-color: beige;
+}
+*/
+
+.nepara{
+    background-color: rgb(187, 187, 248);
+}
+
+.para{
+    background-color: rgb(252, 160, 175);
+}
+
+p{
+    background-color: rgb(252, 252, 1);
+}
+
+#bold{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+.izmeri{
+    font-size: 10pt;
+    text-transform: uppercase;
+}

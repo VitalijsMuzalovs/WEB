@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --maincolor: #9955da;
+}
+
+*::selection{
+    background: var(--maincolor);
+    color: #fff;
+}
+
+html::-webkit-scrollbar{
+    width: 1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #555;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--maincolor);
+}
+
+body{
+    background-color: #eee;
+}
+
+header{
+    width: 100%;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+    padding: 2.5rem 7%;
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+header img{
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li{
+    margin-left: 2.5rem;
+}
+
+header nav ul li a{
+    color: #333;
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover{
+    color: var(--maincolor);
+    border-bottom: 0.2rem solid var(--maincolor);
+    padding: 0.5rem 0;
+}
+
+section{
+    min-height: 50vh;
+    padding: 12rem 7% 0;
+}
+
+#home, #symptoms{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#home .image, #symptoms .image{
+    flex: 1 1 20rem;
+}
+
+#home .image img, #symptoms .image img{
+    width: 100%;
+}
+
+#home .content, #symptoms .content{
+    flex: 1 1 30rem;
+    padding-left: 3rem;
+}
+
+span{
+    color:var(--maincolor);
+}
+
+#home span{
+    font-size: 1.5rem;
+}
+
+#home h1{
+    color: #555;
+    font-size: 3rem;
+}
+
+#home p{
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: var(--maincolor);
+    color:#fff;
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    /*Overflow?*/
+}
+
+.btn:hover{
+    color:#333;
+}
+
+#protect h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+#protect .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#protect .box-container .box{
+    background: #fff;
+    border: 0.1rem solid  rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#protect .box:hover{
+    transform: translateY(-1rem);
+}
+
+#protect h3{
+    font-size: 1.3rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+#symptoms h2{
+    text-align: left;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+#symptoms p{
+    font-size: 1.3rem;
+    color: #777;
+    padding: 1rem 0;
+}
+
+#symptoms ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+#symptoms ul .two{
+    padding-left: 4.5rem;
+}
+
+#symptoms ul li{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    color:#444;
+    padding: .5rem 0;
+}
+
+#prevent{
+    background: #222;
+}
+
+#prevent .row{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+#prevent .image{
+    flex: 1 1 37rem;
+    height: 35rem;
+}
+
+#prevent .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#prevent .content{
+    flex: 1 1 37rem;
+    padding: 2rem 0;
+}
+
+#prevent h2{
+    font-size: 2rem;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+#prevent ul li{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    color: #eee;
+    padding: 0.5rem;
+}
+
+#spread{
+    padding: 12rem 0 0;
+}
+
+#spread h1{
+    font-size: 3rem;
+    text-align: center;
+    color:#555;
+}
+
+#spread .image{
+    height: 80vh;
+    width: 100%;
+    background: url("images/map.png") no-repeat;
+    background-size: cover;
+    margin-top: 4rem;
+}
+
+#footer{
+    background: #222;
+    padding: 10px 50px;
+}
+
+#footer .footer-box{
+    width: 300px;
+}
+
+#footer h5{
+    font-size: 20px;
+}
+
+#footer h5,p,a,ul{
+    color:#888;
+}
+
+#footer li{
+    list-style: none;
+}
+
+#footer h5{
+    margin-bottom: 1rem;
+}
+
+#footer .footer-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
+}
+
+#footer a:hover{
+    color: var(--maincolor)
+}

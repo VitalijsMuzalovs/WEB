@@ -59,6 +59,9 @@ h1{
     text-align: center;
     font-size: 2.5rem;
     font-weight: 900;
+    position: sticky;
+    top:0;
+    z-index: 1;
 }
 
 article{
@@ -107,4 +110,29 @@ footer{
     padding:  2rem;
     color: #333;
     text-align: center;
+}
+
+#scroll-up{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 10px;
+    background-image: url('images/up.png');
+    background-size: 100%;
+}
+
+.pozicija{
+    position:relative;
+    left: 100px;
+}
+
+.aizvert{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/close.png');
+    background-size: 100%;
 }

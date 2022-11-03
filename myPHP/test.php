@@ -1,16 +1,16 @@
 <?php
 
-namespace HexletBasics\Loops\WhileLoop;
-
-function printNumbers($firstNumber)
-{
-    $i = $firstNumber;
-    while ($i >= $firstNumber){
-        print_r($i);
-        print_r("\n");
-        $i=$i-1;
+function makeItFunny($str,$n){
+    $i = 0;
+    $rez = '';
+    while($i < strlen($str)){
+        if(($i+1) % $n === 0){
+            $rez .= strtoupper($str[$i]);
+        }else{$rez .= $str[$i];}
+        $i++;
     }
-print_r('finished!');
+    return $rez;
 }
 
-printNumbers(3);
+$text = 'hello';
+print_r(makeItFunny($text, 2));

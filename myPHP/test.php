@@ -1,9 +1,16 @@
 <?php
 
-namespace HexletBasics\Conditionals\IfElse;
+namespace HexletBasics\Loops\WhileLoop;
 
-function generateAmount($itemCount,$itemPrice){
-    return $itemCount ?: $itemPrice * 3 ;
+function printNumbers($firstNumber)
+{
+    $i = $firstNumber;
+    while ($i >= $firstNumber){
+        print_r($i);
+        print_r("\n");
+        $i=$i-1;
+    }
+print_r('finished!');
 }
 
-print_r(generateAmount(0, 2));
+printNumbers(3);

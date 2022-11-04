@@ -1,16 +1,5 @@
 <?php
+// - Did Joffrey agree?
+// - He did. He also said "I'm using this \n".
 
-function makeItFunny($str,$n){
-    $i = 0;
-    $rez = '';
-    while($i < strlen($str)){
-        if(($i+1) % $n === 0){
-            $rez .= strtoupper($str[$i]);
-        }else{$rez .= $str[$i];}
-        $i++;
-    }
-    return $rez;
-}
-
-$text = 'hello';
-print_r(makeItFunny($text, 2));
+print_r((string) 3.04 . " times");

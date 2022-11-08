@@ -12,7 +12,9 @@
 <body>
     <header>
         <div class="logo"><img src="images/home-img.png">COVID-19</div>
-        <nav>
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav id="navigacija"> <!--  id is for JS only */ -->
             <ul>
                 <li><a href="#home">Sākums</a></li>
                 <li><a href="#protect">Pasargā sevi</a></li>
@@ -118,57 +120,75 @@
         <div class="image"></div>
     </section>
 
-    <section id = "footer">
-        <div class="footer-container">
-            <!-- Speciāli izveidoju 'footer-box' (neviss 'box'), lai nakotnē nesajaukt klases (jo 'box' klase jau ir) -->
-            <div class="footer-box">
-                <h5>Uzziņai</h3>
-                <p>2020.gada martā Pasaules veselības organizācija izsludināja Covid-19 pandēmiju.<br>Pandēmija ir plaša mēroga saslimšanu epidēmija, kas skar visu pasauli.</p>
-            </div>
+    <footer>
+        <section id = "footer">
+            <div class="footer-container">
+                <!-- Speciāli izveidoju 'footer-box' (neviss 'box'), lai nakotnē nesajaukt klases (jo 'box' klase jau ir) -->
+                <div class="footer-box">
+                    <h5>Uzziņai</h3>
+                    <p>2020.gada martā Pasaules veselības organizācija izsludināja Covid-19 pandēmiju.<br>Pandēmija ir plaša mēroga saslimšanu epidēmija, kas skar visu pasauli.</p>
+                </div>
 
-            <div class="footer-box">
-                <h5>Valoda</h5>
-                <ul>
-                    <li><a href="#">Latviešu</a></li>
-                    <li><a href="#">Lietuviešu</a></li>
-                    <li><a href="#">Igauņu</a></li>
-                    <li><a href="#">Angļu</a></li>
-                    <li><a href="#">Krievu</a></li>
-                </ul>
-            </div>
+                <div class="footer-box">
+                    <h5>Valoda</h5>
+                    <ul>
+                        <li><a href="#">Latviešu</a></li>
+                        <li><a href="#">Lietuviešu</a></li>
+                        <li><a href="#">Igauņu</a></li>
+                        <li><a href="#">Angļu</a></li>
+                        <li><a href="#">Krievu</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-box">
-                <h5>Saites</h5>
-                <ul>
-                    <li><a href="#">Sākums</a></li>
-                    <li><a href="#">Pasargā sevi</a></li>
-                    <li><a href="#">Simptomi</a></li>
-                    <li><a href="#">Novērošana</a></li>
-                    <li><a href="#">Izplatība</a></li>
-                </ul>
-            </div>
+                <div class="footer-box">
+                    <h5>Saites</h5>
+                    <ul>
+                        <li><a href="#">Sākums</a></li>
+                        <li><a href="#">Pasargā sevi</a></li>
+                        <li><a href="#">Simptomi</a></li>
+                        <li><a href="#">Novērošana</a></li>
+                        <li><a href="#">Izplatība</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-box">
-                <h5>Kontakti</h5>
-                <ul>
-                    <li><span><i class="fa-solid fa-phone-flip"></i></span> +371 12345678</li>
-                    <li><span><i class="fa-regular fa-envelope"></i></span> covid@covid.lv</li>
-                    <li><span><i class="fa-solid fa-location-dot"></i></span> Latvija</li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                </ul>
+                <div class="footer-box">
+                    <h5>Kontakti</h5>
+                    <ul>
+                        <li><span><i class="fa-solid fa-phone-flip"></i></span> +371 12345678</li>
+                        <li><span><i class="fa-regular fa-envelope"></i></span> covid@covid.lv</li>
+                        <li><span><i class="fa-solid fa-location-dot"></i></span> Latvija</li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
-            
-        </div>
-        <hr>
-        <div class="box-container">
-            
-            <p>Liepājas Valsts tehnikums © 2022</p>
-        </div>
-    </section>
+            <hr>
+            <div class="box-container">
+                
+                <p>Liepājas Valsts tehnikums © 2022</p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        let menuVar = document.querySelector('#menu')
+        let navigacijaVar = document.querySelector('#navigacija')
+
+        menuVar.onclick = () =>{
+            navigacijaVar.classList.toggle('nav-toggle')
+            menuVar.classList.toggle('fa-times')
+        }
+
+        window.onscroll = () =>{
+            navigacijaVar.classList.remove('nav-toggle')
+            menuVar.classList.remove('fa-times')
+        }
+
+    </script>
 
 </body>
 </html>

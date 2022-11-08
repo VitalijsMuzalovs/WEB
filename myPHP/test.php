@@ -1,5 +1,16 @@
 <?php
-// - Did Joffrey agree?
-// - He did. He also said "I'm using this \n".
 
-print_r((string) 3.04 . " times");
+function swap(&$a,&$b){
+    $tempA = $a;
+    $tempB = $b;
+    $a = $tempB;
+    $b = $tempA;
+}
+
+$a = 1;
+$b = 5;
+
+swap($a, $b);
+
+echo $a;
+echo $b;

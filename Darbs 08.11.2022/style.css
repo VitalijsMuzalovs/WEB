@@ -112,11 +112,90 @@ body{
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    height: 600px;
-    /* align-content: stretch; */
+    height: 400px;
     align-items: stretch;
 }
 
 .post{
     width: 29%;
+    font-size: 14px;
+    line-height: 15pt;
+}
+
+.post h3{
+    margin: 10px 0;
+}
+
+.contacts{
+    margin: 0 var(--sidesmargin);
+}
+
+.contacts h3{
+    margin: 30px 0;
+}
+
+.persons{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.person{
+    position: relative;
+    width: 32%;
+    height: 280px;
+    background-color: #e2e2e2;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.person h4{
+    margin-top: 25%;
+}
+
+.personImg{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.person img{
+    width:70%;
+    object-fit: cover;
+}
+
+.personInfo {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 14px;
+}
+
+.personInfo p{
+    margin: 20px 0;
+}
+
+@media (max-width: 1600px){
+    .articles{
+        height: 700px;
+    }
+
+    .post{
+        width: 45%;
+    }
+}
+
+@media (max-width: 900px){
+    .articles{
+        height:fit-content
+    }
+
+    .post{
+        width: 90%;
+    }
+
+    .person{
+        width: 100%;
+    }
 }

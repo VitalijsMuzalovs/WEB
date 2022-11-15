@@ -40,7 +40,7 @@
         <div class="articles">
             <div class="post">
                 <h3>Lorem, ipsum dolor.</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem beatae iste numquam optio quas velit corrupti aliquam quam veniam! Quibusdam magnam commodi quam repellendus quisquam necessitatibus sequi harum et incidunt praesentium consequuntur reiciendis explicabo debitis nam hic dolorum expedita, quia voluptate magni facere porro! Fugit eaque quidem, libero culpa veniam deserunt laudantium sint expedita saepe corporis quasi enim. Reiciendis ipsa accusantium provident autem ullam accusamus ea illum ad, eligendi inventore impedit, maiores quisquam vel ipsam. Soluta consequuntur debitis labore voluptates cupiditate animi fugiat consectetur? Illum excepturi iure deleniti veniam temporibus. Impedit deserunt quidem asperiores maiores eum omnis. Praesentium, nobis?<a href="#">Read more</a></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem beatae iste numquam optio quas velit corrupti aliquam quam veniam! Quibusdam magnam commodi quam repellendus quisquam necessitatibus sequi harum et incidunt praesentium consequuntur reiciendis explicabo debitis nam hic dolorum expedita, quia voluptate magni facere porro! Fugit eaque quidem, libero culpa veniam deserunt laudantium sint expedita saepe corporis quasi enim. Reiciendis ipsa accusantium provident autem ullam accusamus ea illum ad, eligendi inventore impedit, maiores quisquam vel ipsam. Soluta consequuntur debitis labore voluptates cupiditate animi fugiat consectetur? Illum excepturi iure deleniti veniam temporibus. Impedit deserunt quidem asperiores maiores eum omnis. Praesentium, nobis? <a href="#" class="readMore">Read more</a></p>
             </div>
             <div class="post">
                 <h3>Lorem, ipsum dolor.</h3>
@@ -62,7 +62,7 @@
     </section>
 
     <section class="contacts">
-        <h3>Lorem ipsum dolor sit.</h3>
+        <h2>Lorem ipsum dolor sit.</h2>
         <div class="persons">
             <div class="person">
                 <div class="personImg"><a href="#"><img src="images/1.png"></a></div>
@@ -99,12 +99,12 @@
     <section class="bottom">
         <div class="bottomBox">
             <div class="form">
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cupiditate!</p>
-                <form action="#">
+                <form action="#" method="ppost">
                     <input class="inputs" type="text" name="name" required placeholder="Name" size=20>
                     <input class="inputs" type="email" name="email" required autocomplete="off" placeholder="Email" size=20>
-                    <input class="inputs" type="submit" name="submit" value="SEND EMAIL">
+                    <a href="#"><input class="inputs" id="submit" type="submit" name="submit" value="SEND EMAIL"></a>
                 </form>
             </div>
         </div>
@@ -120,6 +120,25 @@
         </div>       
     </footer>
     
+    <script>
+        let btnBlue = document.querySelector('#blue')
+        let btnPurple = document.querySelector('#purple')
+        let btnBlack = document.querySelector('#black')
+        let btnYellow = document.querySelector('#yellow')
+
+        btnBlue.onclick = () =>{
+            document.documentElement.style.setProperty('--maincolor', 'var(--blue)');
+        }
+        btnPurple.onclick = () =>{
+            document.documentElement.style.setProperty('--maincolor', 'var(--purple)');
+        }
+        btnBlack.onclick = () =>{
+            document.documentElement.style.setProperty('--maincolor', 'var(--black)');
+        }
+        btnYellow.onclick = () =>{
+            document.documentElement.style.setProperty('--maincolor', 'var(--yellow)');
+        }
+    </script>
     
 </body>
 </html>

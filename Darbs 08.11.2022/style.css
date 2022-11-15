@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap'); */
 
 * {
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -15,6 +14,7 @@
     --yellow: #cabe11;
     --sidesmargin: 17%;
     --subtitleheight: 220px;
+    --maincolor: var(--blue);
 }
 
 .cnt-column{
@@ -27,7 +27,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
-    background-color: var(--blue);
+    background-color: var(--maincolor);
     height: 35px;
     padding: 0 var(--sidesmargin);
 }
@@ -118,30 +118,51 @@ body{
 .articles{
     display: flex;
     flex-flow: column wrap;
+    justify-content:stretch;
     width: 100%;
-    height: 350px;
+    height: 400px;
+}
+
+.readMore{
+    font-size: 110%;
+    font-weight: 500;
 }
 
 .post{
-    width: 28%;
-    font-size: 10px;
+    width: 32%;
+    font-size: 13px;
     line-height: 13pt;
     font-weight: 300;
 }
 
+h2{
+    color: #fff;
+    font-weight: 300;
+}
+
+h3{
+    color: #1f699b;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h4{
+    color: #1f699b;
+    font-size: 13px;
+}
+
 .post h3{
     margin: 15px 0;
-    color: #1f699b;
-    font-weight: 400;
 }
 
 .contacts{
     margin: 0 var(--sidesmargin);
 }
 
-.contacts h3{
+.contacts h2{
     margin: 30px 0;
-    font-weight: 400;
+    font-weight: 500;
+    color: var(--blue);
 }
 
 .persons{
@@ -154,16 +175,12 @@ body{
 .person{
     position: relative;
     width: 32%;
-    height: 220px;
+    height: fit-content;
     background-color: #e2e2e2;
     text-align: center;
     margin: 20px 0;
-    color: var(--blue);
 }
 
-.person h4,.contacts h3{
-    color: #1f699b;
-}
 .person h4{
     margin-top: 20%;
 }
@@ -189,7 +206,7 @@ body{
     width: 100%;
     text-align: center;
     padding: 10px 20px;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 300;
 }
 
@@ -203,9 +220,13 @@ body{
     border-radius: 5px;
     background: #999999;
     color:#fff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     padding: 2% 20%;
+}
+.persButton:hover, #submit:hover{
+    background: var(--maincolor);
+    color: #fff;
 }
 
 .bottom{
@@ -217,7 +238,7 @@ body{
 .bottomBox{
     height: 100%;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--maincolor);
     opacity: 0.8;
 }
 
@@ -226,7 +247,7 @@ body{
     color: #fff;
 }
 
-.form p,h3{
+.form p{
     margin: 5px;
     font-weight: 300;
 }
@@ -242,7 +263,7 @@ body{
     border-radius: 10px;
     font-size: 12px;
     font-weight: 400;
-    color: var(--blue);
+    color: var(--maincolor);
 }
 
 footer{
@@ -271,19 +292,19 @@ footer .left{
 
 @media (max-width: 1500px){
     .articles{
-        height: 420px;
+        height: 480px;
     }
 }
 
 @media (max-width: 1200px){
     .articles{
-        height: 480px;
+        height: 550px;
     }
 }
 
 @media (max-width: 900px){
     .articles{
-        height:700px;
+        height:900px;
     }
 
     .post{
@@ -314,7 +335,7 @@ footer .left{
     }
 
     .post{
-        width: 90%;
+        width: 100%;
     }
 
     .person{

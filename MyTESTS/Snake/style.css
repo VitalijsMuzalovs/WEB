@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(10,20px);
+    grid-template-rows: repeat(40,20px);
+    width:50%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+
+.item{
+    grid-column-start: 1;
+    grid-column-end: 20;
+    grid-row-start: 1;
+    grid-row-end: 20;
+    border: 1px solid #555;
+}

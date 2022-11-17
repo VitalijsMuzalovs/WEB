@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Comic Sans MS";
+}
+
+body{
+    background: #2c1a2c;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.display{
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.hide{
+    display: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 50px;
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid #fff;
+}
+
+.playerX{
+    color: #09C372;
+}
+
+.playerO{
+    color: #498AFB;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button{
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background: #777;
+}
+
+button:hover{
+    background: #555;
+}

@@ -1,56 +1,66 @@
-window.addEventListener('DOMContentLoaded',() =>{
+window.addEventListener('DOMContentLoaded', () =>{
     const laucini = Array.from(document.querySelectorAll('.tile'))
     const attelotSpeletaju = document.querySelector('.JS-display')
     const poga = document.querySelector('#JS-reset')
     const pazinojums = document.querySelector('.JS-pazinojums')
 
-    let laukums = ['','','','','','','','','']
+    let laukums = ['', '', '', '', '', '', '', '', '']
     let aktivaisSpeletajs = 'X'
     let speleAktiva = true
 
     const uzvarX = 'uzvarX'
-    const uzvarO = 'uzvarO'
+    const uzvarY = 'uzvarY'
     const neizskirts = 'neizskirts'
 
-    /* 
+    /*
+
     0 | 1 | 2
     3 | 4 | 5
     6 | 7 | 8
+
     */
 
     const uzvarasNosacijumi = [
-        [0,1,2],
-        [3,4,5],
-        [6,7,8],
-        [0,3,6],
-        [1,4,7],
-        [2,5,8],
-        [0,4,8],
-        [2,4,6]
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
     ]
 
     function rezultataParbaude(){
         let irUzvaretajs = false
-        for(let i=0; i<=7; i++){
+        for (let i=0; i<=7; i++){
             const nosacijumi = uzvarasNosacijumi[i]
             const a = laukums[nosacijumi[0]]
             const b = laukums[nosacijumi[1]]
             const c = laukums[nosacijumi[2]]
-            
             if(a === '' || b === '' || c === ''){
                 continue
             }
-            
+
             if(a === b && b === c){
-                irUzvaretajs=true
+                irUzvaretajs = true
                 break
             }
         }
 
         if(irUzvaretajs){
             pazinot(
-                aktivaisSpeletajs==='X' ? uzvarX : uzvarY
+                aktivaisSpeletajs === 'X' ? uzvarX : uzvarY
+                
+                /*
+                if(aktivaisSpeletajs == 'X'){
+                    aktivaisSpeletajs = uzvarX
+                }else{
+                    aktivaisSpeletajs = uzvarY
+                }
+                */
             )
+
             speleAktiva = false
             return
         }
@@ -62,18 +72,18 @@ window.addEventListener('DOMContentLoaded',() =>{
 
     const pazinot = (rezultats) =>{
         switch(rezultats){
-            case uzvarO:
-                pazinojums.innerHTML="Spēlētājs <span class='playerO'>O</span> uzvarēja!"
+            case uzvarY:
+                pazinojums.innerHTML = "Spēlētājs <span class='playerO'>O</span> uzvarēja!"
                 break
+            
             case uzvarX:
-                pazinojums.innerHTML="Spēlētājs <span class='playerX'>X</span> uzvarēja!"
+                pazinojums.innerHTML = "Spēlētājs <span class='playerX'>X</span> uzvarēja!"
                 break
-            case neizskirts:
-                pazinojums.innerHTML="Neizšķirts!"
+            
+                case neizskirts:
+                pazinojums.innerHTML = "Neizšķirts rezultāts!"
         }
-
         pazinojums.classList.remove('hide')
-
     }
 
     const parbaude = (laucins) =>{
@@ -88,20 +98,22 @@ window.addEventListener('DOMContentLoaded',() =>{
         laukums[index] = aktivaisSpeletajs
     }
 
-    const mainitSpeletaju = () => {
-        attelotSpeletaju.classList.remove(`player${aktivaisSpeletajs}`) //playerX ||playerY
+    const mainitSpeletaju = () =>{
+        attelotSpeletaju.classList.remove(`player${aktivaisSpeletajs}`)
+        // attelotSpeletaju.classList.remove(`playerX`)
+        // attelotSpeletaju.classList.remove(`playerY`)
 
         if(aktivaisSpeletajs === 'X'){
             aktivaisSpeletajs = 'O'
         }else{
-            aktivaisSpeletajs='X'
+            aktivaisSpeletajs = 'X'
         }
 
         attelotSpeletaju.innerText = aktivaisSpeletajs
         attelotSpeletaju.classList.add(`player${aktivaisSpeletajs}`)
     }
 
-    const lietotajaDarbiba = (laucins,index) => {
+    const lietotajaDarbiba = (laucins, index) =>{
         if(parbaude(laucins) && speleAktiva){
             laucins.innerText = aktivaisSpeletajs
             laucins.classList.add(`player${aktivaisSpeletajs}`)
@@ -111,24 +123,24 @@ window.addEventListener('DOMContentLoaded',() =>{
         }
     }
 
-    const parladetLaukumu = () => {
-        laukums = ['','','','','','','','','']
+    const parladetLaukumu = () =>{
+        laukums = ['', '', '', '', '', '', '', '', '']
         speleAktiva = true
         pazinojums.classList.add('hide')
-
+        
         if(aktivaisSpeletajs === 'O'){
             mainitSpeletaju()
         }
 
-        laucini.forEach(laucins => {
-            laucins.innerText=''
+        laucini.forEach(laucins =>{
+            laucins.innerText = ''
             laucins.classList.remove('playerX')
-            laucins.classList.remove('playerO')
+            laucins.classList.remove('playerY')
         })
     }
 
-    laucini.forEach((laucins,index)=>{
-        laucins.addEventListener('click',() => lietotajaDarbiba(laucins,index))
+    laucini.forEach( (laucins, index) =>{
+        laucins.addEventListener('click', () => lietotajaDarbiba(laucins, index))
     })
 
     poga.addEventListener('click', parladetLaukumu)

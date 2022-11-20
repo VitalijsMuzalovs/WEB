@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>TESTS</title>
+</head>
+
+<style>
+    myClass{
+    position:absolute;
+    background: #555;
+    }
+</style>
+
+<body>
+    <h1 class="myClass">Solar system</h1>    
+    <ul>
+        <li>Sun</li>
+        <li>Merkury</li>
+        <li>Venus</li>
+        <li>Earth</li>
+    </ul>
+</body>
+
+<script>
+    let myElem = document.getElementsByClassName("myClass");
+    console.log(myElem[0]);
+    myStyle = 'color:red; font-size=18px;background-color:green';
+    myElem[0].style.cssText = myStyle;
+
+    console.log(myElem[0].style.color)
+</script>
+
+</html>

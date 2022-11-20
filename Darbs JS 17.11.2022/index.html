@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tīmekļa vietnes papildināšana ar JavaScript</title>
+</head>
+<body>
+    <div class="grid_container">
+        <header class="head">
+            <div class="tel">Tālrunis: +371 29 999 999</div>
+            <div class="color-panel">
+                <a href="#" class="btn" id="blue"></a>
+                <a href="#" class="btn" id="purple"></a>
+                <a href="#" class="btn" id="black"></a>
+                <a href="#" class="btn" id="yellow"></a>
+            </div>
+        </header>
+
+        <div class="title">
+            <div class="title_text">
+                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            </div>
+        </div>
+
+        <div class="sideL"></div>
+        <div class="sideR"></div>
+
+        <div class="logo">
+
+            <div class="title_image">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="images/slideshow1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="images/slideshow2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="images/slideshow3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="images/slideshow4.jpg" style="width:100%">
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="auto" onclick="autoSlideShow(1)">AUTO</div>
+                
+            </div>
+
+        </div>
+    
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <section class="content">
+            <div class="articles">
+                <div class="post big">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem beatae iste numquam optio quas velit corrupti aliquam quam veniam! Quibusdam magnam commodi quam repellendus quisquam necessitatibus sequi harum et incidunt praesentium consequuntur reiciendis explicabo debitis nam hic dolorum expedita, quia voluptate magni facere porro! Fugit eaque quidem, libero culpa veniam deserunt laudantium sint expedita saepe corporis quasi enim. Reiciendis ipsa accusantium provident autem ullam accusamus ea illum ad, eligendi inventore impedit, maiores quisquam vel ipsam. Soluta consequuntur debitis labore voluptates cupiditate animi fugiat consectetur? Illum excepturi iure deleniti veniam temporibus. Impedit deserunt quidem asperiores maiores eum omnis. Praesentium, nobis? <a href="#" class="readMore">Read more</a></p>
+                </div>
+                <div class="post">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla maxime, expedita minima error quos obcaecati deleniti natus sit illo ad facilis? Magnam omnis, ipsum tempore officia, autem harum dolor accusamus est optio nostrum sunt porro iste quo debitis accusantium dignissimos ea veniam quibusdam illum dolore excepturi corrupti! Suscipit, dolorem!</p>
+                </div>
+                <div class="post">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla maxime, expedita minima error quos obcaecati deleniti natus sit illo ad facilis? Magnam omnis, ipsum tempore officia, autem harum dolor accusamus est optio nostrum sunt porro iste quo debitis accusantium dignissimos ea veniam quibusdam illum dolore excepturi corrupti! Suscipit, dolorem!</p>
+                </div>
+                <div class="post">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla maxime, expedita minima error quos obcaecati deleniti natus sit illo ad facilis? Magnam omnis, ipsum tempore officia, autem harum dolor accusamus est optio nostrum sunt porro iste quo debitis accusantium dignissimos ea veniam quibusdam illum dolore excepturi corrupti! Suscipit, dolorem!</p>
+                </div>
+                <div class="post">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla maxime, expedita minima error quos obcaecati deleniti natus sit illo ad facilis? Magnam omnis, ipsum tempore officia, autem harum dolor accusamus est optio nostrum sunt porro iste quo debitis accusantium dignissimos ea veniam quibusdam illum dolore excepturi corrupti! Suscipit, dolorem!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="contacts">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <div class="persons">
+                <div class="person">
+                    <a class="personImg" ref="#"><img src="images/1.png"></a>
+                    <a class="person_info" href="#"><h4>Lorem, ipsum dolor.</h4></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum totam blanditiis cum incidunt, voluptate impedit aliquam saepe unde doloremque dignissimos sit necessitatibus tenetur, consequuntur corrupti eius iste? Quisquam, nemo amet.</p>
+                    <a href="#" class="persButton">READ MORE</a>
+                </div>
+                <div class="person">
+                    <a class="personImg" href="#"><img src="images/2.png"></a>
+                    <a class="person_info" href="#"><h4>Lorem, ipsum.</h4></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum totam blanditiis cum incidunt, voluptate impedit aliquam saepe unde doloremque dignissimos sit necessitatibus tenetur, consequuntur corrupti eius iste? Quisquam, nemo amet.</p>
+                    <a href="#" class="persButton">READ MORE</a>
+                </div>
+                <div class="person">
+                    <a class="personImg" href="#"><img src="images/3.png"></a>
+                    <a class="person_info" href="#"><h4>Lorem ipsum dolor sit amet.</h4></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum totam blanditiis cum incidunt, voluptate impedit aliquam saepe unde doloremque dignissimos sit necessitatibus tenetur, consequuntur corrupti eius iste? Quisquam, nemo amet.</p>
+                    <a href="#" class="persButton">READ MORE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cupiditate!</p>
+            <form action="#" method="ppost">
+                <input class="inputs" type="text" name="name" required placeholder="Name" size=20>
+                <input class="inputs" type="email" name="email" required autocomplete="off" placeholder="Email" size=20>
+                <a href="#"><input class="inputs" id="submit" type="submit" name="submit" value="SEND EMAIL"></a>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="left">Liepājas Valsts tehnikums &copy; 2022</div>
+            <div class="right">
+                <a href="#" class="socialMedia"><img src="images/in.png"></a>
+                <a href="#" class="socialMedia"><img src="images/yt.png"></a>
+                <a href="#" class="socialMedia"><img src="images/fb.png"></a>
+                <a href="#" class="socialMedia"><img src="images/tw.png"></a>
+            </div>  
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

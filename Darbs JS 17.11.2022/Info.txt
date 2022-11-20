@@ -1,0 +1,2 @@
+Pilnīgi pārtaisīts darbs.
+Izmantots GridLayout.

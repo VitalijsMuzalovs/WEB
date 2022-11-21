@@ -13,6 +13,7 @@
     --muzalovsPurple: #902094;
     --muzalovsBlack: #1b1b1b;
     --muzalovsYellow: #cabe11;
+    /* --mainColor: var(--muzalovsBlue); */
 }
 
 .grid_container{
@@ -36,7 +37,7 @@
     grid-template-columns: 17% auto auto 17%;
     grid-template-areas: ". tel color-panel .";
     grid-area: header;
-    background-color: var(--maincolor);
+    background-color: var(--mainColor);
     align-items: center;
 }
 
@@ -65,21 +66,23 @@
 
 /* ###### Colors ##### */
 
-#blue{
+.blue{
     background-color: var(--muzalovsBlue);
 }
 
-#purple{
+.purple{
     background-color: var(--muzalovsPurple);
 }
 
-#black{
+.black{
     background-color: var(--muzalovsBlack);
 }
 
-#yellow{
+.yellow{
     background-color: var(--muzalovsYellow);
 }
+
+
 
 body{
     background: url('images/bg.png') center 100% repeat;
@@ -88,7 +91,7 @@ body{
 .title h1{
     font-size: 26px;
     font-weight: 500;
-    color: var(--maincolor);
+    color: var(--mainColor);
 }
 
 
@@ -261,14 +264,14 @@ h2{
 }
 
 h3{
-  color: var(--maincolor);
+  color: var(--mainColor);
   font-size: 16px;
   font-weight: 500;
   text-align-last: left;
 }
 
 h4{
-  color: var(--maincolor);
+  color: var(--mainColor);
   font-size: 13px;
 }
 
@@ -280,7 +283,7 @@ h4{
 .contacts h2{
   font-weight: 500;
   text-align: left;
-  color: var(--maincolor);
+  color: var(--mainColor);
 }
 
 .contacts{
@@ -336,7 +339,7 @@ h4{
   justify-self: center;
 }
 .persButton:hover, #submit:hover{
-  background: var(--maincolor);
+  background: var(--mainColor);
   color: #fff;
 }
 
@@ -346,7 +349,7 @@ h4{
     text-align: center;
     background: url('images/bg2.png') center 100% repeat;
     object-fit: fill;
-    background-color: var(--maincolor);
+    background-color: var(--mainColor);
     opacity: 0.8;
     text-align: center;
     color: #fff;
@@ -368,7 +371,7 @@ h4{
   border-radius: 10px;
   font-size: 12px;
   font-weight: 400;
-  color: var(--maincolor);
+  color: var(--mainColor);
 }
 
 .footer{
@@ -377,7 +380,7 @@ h4{
     grid-template-columns: 17% auto auto 17%;
     grid-template-areas: ". left right .";
     align-items: center;
-    background-color: var(--maincolor);
+    background-color: var(--mainColor);
     color: #fff;
     font-size: 13px;
 }

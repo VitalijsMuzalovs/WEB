@@ -1,29 +1,14 @@
 if(!localStorage.pageMainColor){
-  document.documentElement.style.setProperty('--maincolor', 'var(--muzalovsBlue)');
+  localStorage.pageMainColor = 'var(--muzalovsBlue)';
+  document.documentElement.style.setProperty('--mainColor', localStorage.pageMainColor);
 }else{
-  document.documentElement.style.setProperty('--maincolor', localStorage.pageMainColor);
+  document.documentElement.style.setProperty('--mainColor', localStorage.pageMainColor);
 }
 
-let btnBlue = document.querySelector('#blue')
-let btnPurple = document.querySelector('#purple')
-let btnBlack = document.querySelector('#black')
-let btnYellow = document.querySelector('#yellow')
-
-btnBlue.onclick = () =>{
-    document.documentElement.style.setProperty('--maincolor', 'var(--muzalovsBlue)');
-    localStorage.pageMainColor = 'var(--muzalovsBlue)'
-}
-btnPurple.onclick = () =>{
-    document.documentElement.style.setProperty('--maincolor', 'var(--muzalovsPurple)');
-    localStorage.pageMainColor = 'var(--muzalovsPurple)'
-}
-btnBlack.onclick = () =>{
-    document.documentElement.style.setProperty('--maincolor', 'var(--muzalovsBlack)');
-    localStorage.pageMainColor = 'var(--muzalovsBlack)'
-}
-btnYellow.onclick = () =>{
-    document.documentElement.style.setProperty('--maincolor', 'var(--muzalovsYellow)');
-    localStorage.pageMainColor = 'var(--muzalovsYellow)'
+function changeMainColor(event){
+  let myColor = getComputedStyle(event.currentTarget).backgroundColor;
+  localStorage.pageMainColor = myColor;
+  document.documentElement.style.setProperty('--mainColor', myColor);
 }
 
 // ##### Automatic Slideshow #####

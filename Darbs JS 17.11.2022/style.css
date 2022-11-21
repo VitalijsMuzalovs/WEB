@@ -9,13 +9,10 @@
 }
 
 :root{
-    --blue: #04436e;
-    --purple: #902094;
-    --black: #1b1b1b;
-    --yellow: #cabe11;
-    --sidesmargin: 17%;
-    --subtitleheight: 220px;
-    --maincolor: var(--blue);
+    --muzalovsBlue: #04436e;
+    --muzalovsPurple: #902094;
+    --muzalovsBlack: #1b1b1b;
+    --muzalovsYellow: #cabe11;
 }
 
 .grid_container{
@@ -69,19 +66,19 @@
 /* ###### Colors ##### */
 
 #blue{
-    background-color: var(--blue);
+    background-color: var(--muzalovsBlue);
 }
 
 #purple{
-    background-color: var(--purple);
+    background-color: var(--muzalovsPurple);
 }
 
 #black{
-    background-color: var(--black);
+    background-color: var(--muzalovsBlack);
 }
 
 #yellow{
-    background-color: var(--yellow);
+    background-color: var(--muzalovsYellow);
 }
 
 body{

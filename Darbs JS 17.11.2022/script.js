@@ -1,9 +1,8 @@
 if(!localStorage.pageMainColor){
   localStorage.pageMainColor = 'var(--muzalovsBlue)';
-  document.documentElement.style.setProperty('--mainColor', localStorage.pageMainColor);
-}else{
-  document.documentElement.style.setProperty('--mainColor', localStorage.pageMainColor);
 }
+
+document.documentElement.style.setProperty('--mainColor', localStorage.pageMainColor);
 
 function changeMainColor(event){
   let myColor = getComputedStyle(event.currentTarget).backgroundColor;
@@ -11,7 +10,7 @@ function changeMainColor(event){
   document.documentElement.style.setProperty('--mainColor', myColor);
 }
 
-// ##### Automatic Slideshow #####
+// ##### Automatic/Manual Slideshow #####
 
 let slideIndex = 0;
 showSlides()

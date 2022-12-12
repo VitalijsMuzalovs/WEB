@@ -160,3 +160,4 @@ tumsi.addEventListener('click',function(){
     localStorage.textColor = '#333'
     location.reload()
 })
+
